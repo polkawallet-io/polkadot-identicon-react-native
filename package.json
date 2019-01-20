@@ -1,0 +1,44 @@
+{
+  "name": "polkadot-identicon-react-native",
+  "version": "0.0.1",
+  "description": "Renders an SVG picture representing an address, @polkadot/ui-identicon for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polkawallet-io/polkadot-identicon-react-native.git"
+  },
+  "keywords": [
+    "polkadot",
+    "identicon",
+    "ReactNative"
+  ],
+  "author": "Fuyao Jiang",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/polkawallet-io/polkadot-identicon-react-native/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@babel/runtime": "^7.2.0",
+    "@polkadot/ui-settings": "^0.25.7",
+    "@types/color": "^3.0.0",
+    "@types/react-copy-to-clipboard": "^4.2.6",
+    "color": "^3.0.0",
+    "react-copy-to-clipboard": "^5.0.1"
+  },
+  "deprecated": false,
+  "description": "Renders an SVG picture representing an address",
+  "devDependencies": {
+    "@polkadot/keyring": "^0.33.35",
+    "@polkadot/util-crypto": "^0.33.35",
+    "xmlserializer": "^0.6.1"
+  },
+  "peerDependencies": {
+    "@polkadot/keyring": "*",
+    "@polkadot/util-crypto": "*",
+    "react": "*"
+  }
+}
