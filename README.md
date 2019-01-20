@@ -10,7 +10,7 @@ To install the component, do `npm install polkadot-identicon-react-native`
 Inside a React component, you can now render any account with the associated icon -
 
 ```javascript
-import Identicon from 'ui-identicon-react-native';
+import Identicon from 'polkadot-identicon-react-native';
 
 ...
 render () {

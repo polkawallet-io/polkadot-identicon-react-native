@@ -1,6 +1,6 @@
 {
   "name": "polkadot-identicon-react-native",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Renders an SVG picture representing an address, @polkadot/ui-identicon for React Native",
   "main": "index.js",
   "scripts": {
