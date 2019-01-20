@@ -1,11 +1,11 @@
 # polkadot-identicon-react-native
-This package is clone from @polkadot/ui-identicon.
+This package is clone from [@polkadot/ui-identicon](https://github.com/polkadot-js/ui/blob/master/packages/ui-identicon).
 Just for running in the React Native.
 A generic identity icon that can render icons based on the theme, be it Substrate or Polkadot.
 
 ## Usage
 
-To install the component, do `npm install ui-identicon-react-native`
+To install the component, do `npm install polkadot-identicon-react-native`
 
 Inside a React component, you can now render any account with the associated icon -
 
