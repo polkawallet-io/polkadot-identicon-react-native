@@ -17,7 +17,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _keyring = require("@polkadot/keyring");
 
-var _asU8a = _interopRequireDefault(require("@polkadot/util-crypto/blake2/blake2b/asU8a"));
+var _utilCrypto = require("@polkadot/util-crypto");
 
 // Copyright 2018 Paritytech via paritytech/oo7/polkadot-identicon
 // Copyright 2018 @polkadot/ui-identicon authors & contributors
@@ -35,10 +35,12 @@ var _asU8a = _interopRequireDefault(require("@polkadot/util-crypto/blake2/blake2
 //   - Split calculations into relevant functions
 //   - Move constants to file-level
 //   - Overall it is now just a static component, expecting an address as an input value
+const blake2 = value => (0, _utilCrypto.blake2AsU8a)(value, 512);
+
 const s = 64;
 const c = s / 2;
 const z = s / 64 * 5;
-const zero = (0, _asU8a.default)(new Uint8Array(32));
+const zero = blake2(new Uint8Array(32));
 const schema = {
   target: {
     freq: 1,
@@ -141,7 +143,7 @@ class Identicon extends _react.default.PureComponent {
   getColors() {
     const value = this.props.value;
     const total = Object.keys(schema).map(k => schema[k].freq).reduce((a, b) => a + b);
-    const id = Array.from((0, _asU8a.default)((0, _keyring.decodeAddress)(value))).map((x, i) => (x + 256 - zero[i]) % 256);
+    const id = Array.from(blake2((0, _keyring.decodeAddress)(value))).map((x, i) => (x + 256 - zero[i]) % 256);
     const d = Math.floor((id[30] + id[31] * 256) % total);
     const rot = id[28] % 6 * 3;
     const sat = Math.floor(id[29] * 70 / 256 + 26) % 80 + 30;
